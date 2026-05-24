@@ -19,7 +19,7 @@ def hotel_fe(file_path):
 
 def flight_fe(file_path) : 
 
-    data = data(file_path)
+    data = load_data(file_path)
     
     data = clean_data(data) 
     
@@ -40,3 +40,20 @@ def rating_fe(file_path):
     data = data[important_feature]
     
     return data 
+
+
+dataset_type = input("Enter dataset type (hotel / flight / rating): ")
+
+file_path = input("Enter dataset path: ")
+
+if dataset_type.lower() == "hotel":
+    data = hotel_fe(file_path)
+
+elif dataset_type.lower() == "flight":
+    data = flight_fe(file_path)
+
+elif dataset_type.lower() == "rating":
+    data = rating_fe(file_path)
+
+else:
+    print("Unknown dataset type")
