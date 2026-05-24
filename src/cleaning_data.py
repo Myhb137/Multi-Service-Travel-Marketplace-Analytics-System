@@ -1,4 +1,5 @@
 from src.data_loader import load_data
+from pandas.api.types import is_numeric_dtype
 
 
 def clean_data(file_path):
@@ -17,3 +18,6 @@ def clean_data(file_path):
     
 
     return data
+
+    
+    
