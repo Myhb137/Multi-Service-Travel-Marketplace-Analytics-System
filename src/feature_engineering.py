@@ -2,7 +2,7 @@ from src.cleaning_data import clean_data
 from src.data_loader import load_data  
 
 
-def hotel_feature_eng(file_path):  
+def hotel_fe(file_path):  
 
     data = load_data(file_path) 
 
@@ -17,9 +17,26 @@ def hotel_feature_eng(file_path):
     
     return data 
 
-def flight_feature_eng(file_path) : 
+def flight_fe(file_path) : 
 
     data = data(file_path)
     
     data = clean_data(data) 
     
+    important_feature = [] 
+    
+    data = data[important_feature]
+    
+    return data 
+
+def rating_fe(file_path): 
+    
+    data = load_data(file_path) 
+    
+    data = clean_data(data)
+    
+    important_feature = []
+    
+    data = data[important_feature]
+    
+    return data 
