@@ -1,7 +1,7 @@
 import pandas as pd
 
-def load_data(file_path):
+def load_data(path):
     try:
-        return pd.read_csv(file_path, encoding="utf-8")
+        return pd.read_csv(path, encoding="utf-8")
     except UnicodeDecodeError:
-        return pd.read_csv(file_path, encoding="latin1")
+        return pd.read_csv(path, encoding="latin1")

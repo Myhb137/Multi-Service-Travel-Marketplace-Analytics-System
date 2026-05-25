@@ -2,8 +2,8 @@ from src.data_loader import load_data
 from pandas.api.types import is_numeric_dtype
 
 
-def clean_data(file_path):
-    data = load_data(file_path)
+def clean_data(data):
+    
 
     # 1. Missing values
     for col in data.columns:
